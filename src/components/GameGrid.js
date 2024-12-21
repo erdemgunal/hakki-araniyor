@@ -5,7 +5,6 @@ import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Star, Clock, BarChart, Calendar } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function GameGrid() {
@@ -13,24 +12,10 @@ export default function GameGrid() {
     filteredGames,
     totalGames,
     currentPage,
-    setCurrentPage,
+    handlePageChange,
     totalPages,
     ITEMS_PER_PAGE
   } = useGameContext()
-
-  const pathname = usePathname() || '/';  // Get current pathname
-  const searchParams = useSearchParams()  // Get query params
-  const router = useRouter()  // Use router for navigation
-
-  // Ensure pathname is a string
-  const handlePageChange = (page) => {
-    setCurrentPage(page)
-    // Update the URL with the new page number
-    router.push({
-      pathname: '/',  // Default to '/' if pathname is undefined
-      query: { ...Object.fromEntries(searchParams), page: page } // Update page query parameter
-    })
-  }
 
   if (!filteredGames.length) {
     return (
@@ -112,7 +97,7 @@ export default function GameGrid() {
             </Button>
 
             <div className="flex gap-2 flex-wrap justify-center">
-              {[...Array(totalPages)].map((_, i) => {
+              {Array.from({ length: totalPages }, (_, i) => {
                 const page = i + 1
                 const isCurrentPage = currentPage === page
 

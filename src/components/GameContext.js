@@ -3,30 +3,39 @@ import React, { createContext, useState, useContext, useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import gamesData from '@/data/games.json'
 
-const ITEMS_PER_PAGE = 12 
+const ITEMS_PER_PAGE = 12
 
 const GameContext = createContext()
 
 export const GameProvider = ({ children }) => {
   const router = useRouter()
   const searchParams = useSearchParams()
-  
-  // Initialize state from URL parameters or defaults
+
   const [games] = useState(gamesData)
-  const [filteredGames, setFilteredGames] = useState(gamesData) // Initialize with all games
+  const [filteredGames, setFilteredGames] = useState(gamesData)
   const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '')
   const [activeFilters, setActiveFilters] = useState(searchParams.get('filters')?.split(',').filter(Boolean) || [])
   const [sortOrder, setSortOrder] = useState(searchParams.get('sort') || 'popularity')
-  const [currentPage, setCurrentPage] = useState(parseInt(searchParams.get('page')) || 1)
 
-  // Map difficulty levels to game difficulty ranges
-  const getDifficultyRange = (difficultyLevel) => {
-    switch(difficultyLevel) {
-      case 'easy': return [1, 3];
-      case 'medium': return [4, 7];
-      case 'hard': return [8, 10];
-      default: return null;
+  // Get page from URL or default to 1
+  const initialPage = parseInt(searchParams.get('page')) || 1
+  const [currentPage, setCurrentPage] = useState(initialPage)
+
+  useEffect(() => {
+    const urlPage = parseInt(searchParams.get('page')) || 1
+    if (urlPage !== currentPage) {
+      setCurrentPage(urlPage)
     }
+  }, [searchParams])
+
+  // Update URL when page changes
+  const handlePageChange = (newPage) => {
+    const current = new URLSearchParams(Array.from(searchParams.entries()))
+    current.set('page', newPage.toString())
+    const search = current.toString()
+    const newURL = `${window.location.pathname}${search ? `?${search}` : ''}`
+    router.push(newURL, { scroll: false })
+    setCurrentPage(newPage)
   }
 
   // Filter and sort games
@@ -45,13 +54,11 @@ export const GameProvider = ({ children }) => {
     if (activeFilters.length > 0) {
       filtered = filtered.filter(game => {
         return activeFilters.every(filter => {
-          // Check if it's a difficulty filter
           const difficultyRange = getDifficultyRange(filter)
           if (difficultyRange) {
             const gameDifficulty = game.difficuly || game.difficulty
             return gameDifficulty >= difficultyRange[0] && gameDifficulty <= difficultyRange[1]
           }
-          // Otherwise, treat it as a tag filter
           return game.tags.includes(filter)
         })
       })
@@ -78,32 +85,6 @@ export const GameProvider = ({ children }) => {
     setFilteredGames(filtered)
   }, [games, searchTerm, activeFilters, sortOrder])
 
-  // Update URL when filters change
-  useEffect(() => {
-    updateURL({
-      search: searchTerm,
-      filters: activeFilters.join(','),
-      sort: sortOrder,
-      page: currentPage
-    })
-  }, [searchTerm, activeFilters, sortOrder, currentPage])
-
-  const updateURL = (updates) => {
-    const current = new URLSearchParams(Array.from(searchParams.entries()))
-    
-    Object.entries(updates).forEach(([key, value]) => {
-      if (value && value.length > 0) {
-        current.set(key, value)
-      } else {
-        current.delete(key)
-      }
-    })
-    
-    const search = current.toString()
-    const newURL = `${window.location.pathname}${search ? `?${search}` : ''}`
-    router.push(newURL, { scroll: false })
-  }
-
   // Calculate pagination
   const totalPages = Math.ceil(filteredGames.length / ITEMS_PER_PAGE)
   const paginatedGames = filteredGames.slice(
@@ -124,6 +105,7 @@ export const GameProvider = ({ children }) => {
       setSortOrder,
       currentPage,
       setCurrentPage,
+      handlePageChange,
       totalPages,
       ITEMS_PER_PAGE
     }}>
@@ -138,4 +120,14 @@ export const useGameContext = () => {
     throw new Error('useGameContext must be used within a GameProvider')
   }
   return context
+}
+
+// Helper function for difficulty ranges
+const getDifficultyRange = (difficultyLevel) => {
+  switch(difficultyLevel) {
+    case 'easy': return [1, 3]
+    case 'medium': return [4, 7]
+    case 'hard': return [8, 10]
+    default: return null
+  }
 }

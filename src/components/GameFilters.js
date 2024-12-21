@@ -1,6 +1,7 @@
 "use client"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useGameContext } from './GameContext'
+import { useRouter, useSearchParams } from 'next/navigation' // Import for URL handling
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import {
@@ -14,30 +15,61 @@ import {
 export default function GameFilters() {
     const { setSearchTerm, activeFilters, setActiveFilters, sortOrder, setSortOrder } = useGameContext()
     const [localSearchTerm, setLocalSearchTerm] = useState('')
+    const router = useRouter() // Access router for URL updates
+    const searchParams = useSearchParams() // Access current URL parameters
 
     const handleSearch = () => {
+        const current = new URLSearchParams(Array.from(searchParams.entries()))
+
+        // Update the search term in the URL
+        if (localSearchTerm) {
+            current.set('search', localSearchTerm)
+        } else {
+            current.delete('search')
+        }
+
+        // Reset page to 1
+        current.set('page', '1')
+
+        // Push the updated URL
+        const search = current.toString()
+        const newURL = `${window.location.pathname}${search ? `?${search}` : ''}`
+        router.push(newURL, { scroll: false })
+
+        // Update the context
         setSearchTerm(localSearchTerm)
     }
 
-    const handleFilterChange = (value) => {
-        setActiveFilters(prev => {
-            // Allow only one difficulty filter at a time
-            const difficultyFilters = ['easy', 'medium', 'hard']
-            if (difficultyFilters.includes(value)) {
-                return prev.includes(value) ? [] : [value]
-            }
-            return prev.includes(value)
-                ? prev.filter(filter => filter !== value)
-                : [...prev, value]
-        })
-    }
+    const handleFilterChange = (filter) => {
+        const current = new URLSearchParams(Array.from(searchParams.entries()))
+        const updatedFilters = [...activeFilters]
 
-    // Difficulty options with their display names
-    const difficultyOptions = [
-        { value: 'easy', label: 'Kolay' },
-        { value: 'medium', label: 'Orta' },
-        { value: 'hard', label: 'Zor' }
-    ]
+        // Toggle the filter
+        if (updatedFilters.includes(filter)) {
+            const index = updatedFilters.indexOf(filter)
+            updatedFilters.splice(index, 1)
+        } else {
+            updatedFilters.push(filter)
+        }
+
+        // Update the filters in the URL
+        if (updatedFilters.length > 0) {
+            current.set('filters', updatedFilters.join(','))
+        } else {
+            current.delete('filters')
+        }
+
+        // Reset page to 1
+        current.set('page', '1')
+
+        // Push the updated URL
+        const search = current.toString()
+        const newURL = `${window.location.pathname}${search ? `?${search}` : ''}`
+        router.push(newURL, { scroll: false })
+
+        // Update the context
+        setActiveFilters(updatedFilters)
+    }
 
     return (
         <div className="mb-8 space-y-4">
@@ -53,7 +85,11 @@ export default function GameFilters() {
             </div>
             <div className="flex space-x-2">
                 <div className="flex gap-2">
-                    {difficultyOptions.map(option => (
+                    {[
+                        { value: 'easy', label: 'Kolay' },
+                        { value: 'medium', label: 'Orta' },
+                        { value: 'hard', label: 'Zor' },
+                    ].map(option => (
                         <Button
                             key={option.value}
                             variant={activeFilters.includes(option.value) ? "default" : "outline"}
@@ -63,7 +99,27 @@ export default function GameFilters() {
                         </Button>
                     ))}
                 </div>
-                <Select value={sortOrder} onValueChange={(value) => setSortOrder(value)}>
+                <Select value={sortOrder} onValueChange={(value) => {
+                    const current = new URLSearchParams(Array.from(searchParams.entries()))
+
+                    // Update sort order in the URL
+                    if (value) {
+                        current.set('sort', value)
+                    } else {
+                        current.delete('sort')
+                    }
+
+                    // Reset page to 1
+                    current.set('page', '1')
+
+                    // Push the updated URL
+                    const search = current.toString()
+                    const newURL = `${window.location.pathname}${search ? `?${search}` : ''}`
+                    router.push(newURL, { scroll: false })
+
+                    // Update the context
+                    setSortOrder(value)
+                }}>
                     <SelectTrigger className="w-[180px]">
                         <SelectValue placeholder="Şuna göre sırala" />
                     </SelectTrigger>

@@ -6,33 +6,51 @@ export default function Rules() {
     const sections = [
         {
             title: "Oyuncular",
-            content: "Herhangi bir grup (2 veya daha fazla kişi) durum bulmacası oynayabilir. İlk olarak, bir sunucu seçmelisiniz.",
+            content: "2 veya daha fazla kişiden oluşan herhangi bir grup bir durum bulmacası oynayabilir. İlk olarak, sunucuyu seçmelisiniz.",
             color: 'bg-indigo-100', // Example color
             titleColor: 'text-indigo-600', // Example title color
         },
         {
-            title: "Derecelendirme",
-            content: "Bulmacayı çözdünüz mü? Durum bulmacalarının en ilginç olanlarını bulmalarına yardımcı olmak için diğer kullanıcılara bu bulmacayı puanlayın.",
+            title: "Durumu okuyun",
+            content: "Sunucu bir durum seçer ve problemi diğer oyunculara tanıtır. Sunucu cevabı kontrol eder, ancak diğerlerine okumaz.",
             color: 'bg-green-100',
             titleColor: 'text-green-600',
         },
         {
-            title: "Faydası",
-            content: "Durum bulmacaları küçük bir beyin egzersizidir. Beynin iki yarım küresini de çalıştırır, analiz etmeyi, keşfetmeyi ve gizemli şeylerin gizli nedenlerini bulmayı öğretir.",
+            title: "Amaç",
+            content: "Oyuncuların amacı tahmin etmek ve sunucuya ne olduğunu söylemektir. Bunu başarmak için sunucuya farklı sorular sormaları gerekir. Sunucunun sadece “Evet”, “Hayır” veya “Önemli değil/Bilmiyorum/Soruyu belirtin” şeklinde cevap vermesine izin verilir.",
             color: 'bg-yellow-100',
             titleColor: 'text-yellow-600',
         },
         {
-            title: "Nerede Oynanır",
-            content: "Durum bulmacalarının avantajlarından biri, özel bir ekipman gerektirmemeleridir. Seyahat ederken, bir partide, çift olarak ya da büyük gruplar halinde oynayabilirsiniz.",
+            title: "Puanla",
+            content: "Have solved it? Rate the riddle to help other users to find the most interesting situation puzzles.",
             color: 'bg-purple-100',
             titleColor: 'text-purple-600',
         },
         {
-            title: "Detaylar",
-            content: "Deneyimli bir sunucu, hikayeye istediği gibi detaylar ekleyebilir (bulmacayı \"Bilmiyorum\" ve \"Önemli değil\" cevaplarının sayısını azaltarak çok daha karmaşık hale getirebilir).",
+            title: "Örnek",
+            content: "Sunucu diyor ki: Çıplak bir kişi bir tarlanın ortasında ölü bulundu. Elinde yanmış bir kibrit tutuyordu. Ne olmuştu ve oraya nasıl gelmişti?  Oyuncular sorular sormaya başlar:  - Yanında kimse var mıydı?  - Hayır.  - Çıplak mı öldü?  - Evet.  - Çıplaklığından utanıyor muydu? - Bu önemli değil. Ve böyle devam eder.",
             color: 'bg-teal-100',
             titleColor: 'text-teal-600',
+        },
+        {
+            "title": "Avantaj",
+            "content": "Durum bulmacaları küçük bir beyin depremidir. Her iki yarımküreyi de harekete geçirir, analiz etmeyi, keşfetmeyi ve gizemli şeylerin gizli nedenlerini bulmayı öğretir. Birçok kuruluş, çalışanlarının düşünme yeteneklerini geliştirmek amacıyla beyin fırtınası yapmak için durum bulmacalarını seçmektedir.",
+            "color": "bg-red-100",
+            "titleColor": "text-red-600"
+        },
+        {
+            "title":"Nerede oynanır",
+            "content":"Durum bulmacalarının avantajlarından biri de herhangi bir özel ekipman gerektirmemesidir. Hareket halindeyken, seyahat ederken, bir partide, çiftler halinde veya büyük gruplar halinde oynayabilirsiniz.",
+            "color":"bg-blue-100",
+            "titleColor":"text-blue-600"
+        },
+        {
+            "title":"Detaylar",
+            "content":"Deneyimli bir sunucu hikayeye istediği ayrıntıları ekleyebilir (bilmece, “Bilmiyorum” ve “Önemli değil” cevaplarının sayısını azaltarak çok daha karmaşık hale gelebilir).",
+            "color":"bg-yellow-100",
+            "titleColor":"text-yellow-600"
         }
     ];
 

@@ -9,7 +9,7 @@ const RelatedGames = ({ currentGame, relatedGames }) => {
 
     return (
         <div className="mt-8">
-            <h2 className="text-4xl font-bold mb-4">Related Games</h2>
+            <h2 className="text-4xl font-bold mb-4">İlgili Oyunlar</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {relatedGames
                     .filter((game) => game.id !== currentGame.id)
@@ -63,7 +63,7 @@ const RelatedGames = ({ currentGame, relatedGames }) => {
                                             </span>
                                             <span className="flex items-center whitespace-nowrap">
                                                 <Calendar className="w-3 h-3 mr-1" />
-                                                {new Date(game.date * 1000).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
+                                                {new Date(game.date * 1000).toLocaleDateString('tr-TR', { year: 'numeric', month: 'long' })}
                                             </span>
                                         </div>
                                     </div>

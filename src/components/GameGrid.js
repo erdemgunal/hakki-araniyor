@@ -68,7 +68,7 @@ export default function GameGrid() {
                         </span>
                         <span className="flex items-center whitespace-nowrap">
                           <Calendar className="w-3 h-3 mr-1" />
-                          {new Date(game.date * 1000).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
+                          {new Date(game.date * 1000).toLocaleDateString('tr-TR', { year: 'numeric', month: 'long' })}
                         </span>
                       </div>
                     </div>

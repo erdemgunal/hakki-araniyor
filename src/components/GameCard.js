@@ -106,19 +106,19 @@ export default function GameCard({ game, handleShare, showAnswer, setShowAnswer,
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-xs sm:text-sm text-gray-600 mb-6">
                     <div className="flex items-center bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
                         <BarChart className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-primary" />
-                        <span>Difficulty: {game.difficulty || 'N/A'}/10</span>
+                        <span>Zorluk: {game.difficulty || 'N/A'}/10</span>
                     </div>
                     <div className="flex items-center bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
                         <Star className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-yellow-500" />
-                        <span>Rating: {game.rating || 'N/A'}%</span>
+                        <span>Değerlendirme: {game.rating || 'N/A'}%</span>
                     </div>
                     <div className="flex items-center bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
                         <Clock className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-blue-500" />
-                        <span>Duration: {game.duration || 'N/A'} min</span>
+                        <span>Süre: {game.duration || 'N/A'} min</span>
                     </div>
                     <div className="flex items-center bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
                         <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-green-500" />
-                        <span>{game.date ? new Date(game.date * 1000).toLocaleDateString('en-US', {
+                        <span>{game.date ? new Date(game.date * 1000).toLocaleDateString('tr-TR', {
                             year: 'numeric',
                             month: 'long'
                         }) : 'N/A'}</span>
@@ -130,7 +130,7 @@ export default function GameCard({ game, handleShare, showAnswer, setShowAnswer,
                     className="w-full sm:w-auto text-base sm:text-lg font-medium transition-all hover:scale-105"
                     size="lg"
                 >
-                    {showAnswer ? 'Hide Answer' : 'Reveal Answer'}
+                    {showAnswer ? 'Cevabı Gizle' : 'Cevabı Göster'}
                 </Button>
             </CardContent>
         </Card>

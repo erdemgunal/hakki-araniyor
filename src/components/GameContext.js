@@ -1,5 +1,5 @@
 "use client"
-import React, { createContext, useState, useContext, useEffect } from 'react'
+import React, { createContext, useState, useContext, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import gamesData from '@/data/games.json'
 
@@ -7,7 +7,8 @@ const ITEMS_PER_PAGE = 12
 
 const GameContext = createContext()
 
-export const GameProvider = ({ children }) => {
+// Separate component that uses useSearchParams
+function GameProviderContent({ children }) {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -111,6 +112,15 @@ export const GameProvider = ({ children }) => {
     }}>
       {children}
     </GameContext.Provider>
+  )
+}
+
+// Main provider with Suspense
+export const GameProvider = ({ children }) => {
+  return (
+    <Suspense fallback={<div>Loading game data...</div>}>
+      <GameProviderContent>{children}</GameProviderContent>
+    </Suspense>
   )
 }
 

@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import { getGameById } from "@/lib/getGameById";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Skeleton } from "@/components/ui/skeleton";
-import { Card, CardContent } from "@/components/ui/card";
 import RelatedGames from "@/components/RelatedGames";
 import { getRelatedGames } from "@/lib/getRelatedGames";
 import VoteForm from '@/components/VoteForm';

@@ -43,7 +43,7 @@ export default function Header() {
         <nav className="hidden md:flex space-x-8">
           <ul className="flex flex-row space-x-8">
             <li><Link href="/about" className="text-white hover:text-white/70 duration-200">Hakkımızda</Link></li>
-            <li><Link href="rules" className="text-white hover:text-white/70 duration-200">Nasıl Oynanır?</Link></li>
+            <li><Link href="/rules" className="text-white hover:text-white/70 duration-200">Nasıl Oynanır?</Link></li>
             <li>
               <Link href="https://www.linkedin.com/in/hakkierdem/" className="text-white hover:text-white/70 duration-200 flex items-center" target="_blank">
                 İletişim <ExternalLink className="ml-1" size={16} />

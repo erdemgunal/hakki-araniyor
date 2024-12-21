@@ -492,7 +492,7 @@
   {
     "gameName": "Ölümcül atış",
     "question": "Bir avcı silahını dikkatlice doğrulttu ve ateş etti. Saniyeler sonra hatasını anladı. Dakikalar sonra, ölmüştü.",
-    "answer": "Karla kaplı dağlarda avlanıyordu. Atış bir çığa neden oldu ve çığ adamın üzerini örttü. Adam boğularak öldü.",
+    "answer": "Karla kaplı dağlarda avlanıyordu. Yaptığı atış bir çığa neden oldu ve çığ, adamın üzerini örttü. Adam bu nedenle boğularak hayatını kaybetti.",
     "image": "fatal_shot.svg",
     "tags": [
       "Dedektiflik",

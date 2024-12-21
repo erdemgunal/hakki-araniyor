@@ -27,7 +27,7 @@ export default function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md">
               <DropdownMenuItem>
-                <Link href='rules' className='block px-4 py-2 hover:text-primary'>Nasıl Oynanır?</Link>
+                <Link href='/rules' className='block px-4 py-2 hover:text-primary'>Nasıl Oynanır?</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <Link href="/about" className="block px-4 py-2 hover:text-primary">Hakkımızda</Link>

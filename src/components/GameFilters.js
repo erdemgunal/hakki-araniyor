@@ -42,14 +42,26 @@ export default function GameFilters() {
 
     const handleFilterChange = (filter) => {
         const current = new URLSearchParams(Array.from(searchParams.entries()))
-        const updatedFilters = [...activeFilters]
+        const difficultyFilters = ['easy', 'medium', 'hard']
+        let updatedFilters = [...activeFilters]
 
-        // Toggle the filter
-        if (updatedFilters.includes(filter)) {
-            const index = updatedFilters.indexOf(filter)
-            updatedFilters.splice(index, 1)
+        // If clicking on a difficulty filter
+        if (difficultyFilters.includes(filter)) {
+            // Remove all existing difficulty filters
+            updatedFilters = updatedFilters.filter(f => !difficultyFilters.includes(f))
+            
+            // Add new filter only if it's not the one we just removed
+            if (!activeFilters.includes(filter)) {
+                updatedFilters.push(filter)
+            }
         } else {
-            updatedFilters.push(filter)
+            // Handle non-difficulty filters (if you have any) as before
+            if (updatedFilters.includes(filter)) {
+                const index = updatedFilters.indexOf(filter)
+                updatedFilters.splice(index, 1)
+            } else {
+                updatedFilters.push(filter)
+            }
         }
 
         // Update the filters in the URL
@@ -62,7 +74,6 @@ export default function GameFilters() {
         // Reset page to 1
         current.set('page', '1')
 
-        // Push the updated URL
         const search = current.toString()
         const newURL = `${window.location.pathname}${search ? `?${search}` : ''}`
         router.push(newURL, { scroll: false })

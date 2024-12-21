@@ -1,0 +1,35 @@
+{
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "header": {
+      "title": "Hakki Araniyor"
+    },
+    "filters": {
+      "search": "Search games...",
+      "searchButton": "Search",
+      "difficulty": "Difficulty",
+      "sortBy": "Sort by",
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard",
+      "popularity": "Popularity",
+      "newest": "Newest",
+      "oldest": "Oldest"
+    },
+    "footer": {
+      "about": "About Hakki Araniyor",
+      "aboutText": "Hakki Araniyor is a mystery puzzle game that challenges your detective skills. Solve intriguing cases and uncover the truth!",
+      "quickLinks": "Quick Links",
+      "aboutUs": "About Us",
+      "contact": "Contact",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "connectWithUs": "Connect With Us",
+      "allRightsReserved": "All rights reserved."
+    }
+  }
+  
+  

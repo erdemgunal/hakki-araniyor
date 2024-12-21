@@ -1,0 +1,35 @@
+{
+    "nav": {
+      "home": "Ana Sayfa",
+      "about": "Hakkında",
+      "contact": "İletişim"
+    },
+    "header": {
+      "title": "Hakkı Aranıyor"
+    },
+    "filters": {
+      "search": "Oyunları ara...",
+      "searchButton": "Ara",
+      "difficulty": "Zorluk",
+      "sortBy": "Sırala",
+      "easy": "Kolay",
+      "medium": "Orta",
+      "hard": "Zor",
+      "popularity": "Popülerlik",
+      "newest": "En Yeni",
+      "oldest": "En Eski"
+    },
+    "footer": {
+      "about": "Hakkı Aranıyor Hakkında",
+      "aboutText": "Hakkı Aranıyor, dedektiflik becerilerinizi zorlayan bir gizem bulmaca oyunudur. İlginç vakaları çözün ve gerçeği ortaya çıkarın!",
+      "quickLinks": "Hızlı Bağlantılar",
+      "aboutUs": "Hakkımızda",
+      "contact": "İletişim",
+      "privacyPolicy": "Gizlilik Politikası",
+      "termsOfService": "Kullanım Şartları",
+      "connectWithUs": "Bize Ulaşın",
+      "allRightsReserved": "Tüm hakları saklıdır."
+    }
+  }
+  
+  

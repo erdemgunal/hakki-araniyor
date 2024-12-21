@@ -7,6 +7,24 @@ const ITEMS_PER_PAGE = 12
 
 const GameContext = createContext()
 
+// Add this helper function at the top level
+const normalizeText = (text) => {
+  return text
+    .toLowerCase()
+    .replace(/ğ/g, 'g')
+    .replace(/ü/g, 'u')
+    .replace(/ş/g, 's')
+    .replace(/ı/g, 'i')
+    .replace(/ö/g, 'o')
+    .replace(/ç/g, 'c')
+    .replace(/Ğ/g, 'g')
+    .replace(/Ü/g, 'u')
+    .replace(/Ş/g, 's')
+    .replace(/İ/g, 'i')
+    .replace(/Ö/g, 'o')
+    .replace(/Ç/g, 'c')
+}
+
 // Separate component that uses useSearchParams
 function GameProviderContent({ children }) {
   const router = useRouter()
@@ -43,11 +61,12 @@ function GameProviderContent({ children }) {
   useEffect(() => {
     let filtered = [...games]
 
-    // Apply search filter
+    // Apply search filter with normalized text
     if (searchTerm) {
+      const normalizedSearchTerm = normalizeText(searchTerm)
       filtered = filtered.filter(game => 
-        game.gameName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        game.question.toLowerCase().includes(searchTerm.toLowerCase())
+        normalizeText(game.gameName).includes(normalizedSearchTerm) ||
+        normalizeText(game.question).includes(normalizedSearchTerm)
       )
     }
 

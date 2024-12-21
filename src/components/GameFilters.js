@@ -1,5 +1,4 @@
 "use client"
-import { Suspense } from 'react'
 import { useState } from 'react'
 import { useGameContext } from './GameContext'
 import { useRouter, useSearchParams } from 'next/navigation' // Import for URL handling
@@ -13,8 +12,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 
-// Separate component that uses useSearchParams
-function FiltersContent() {
+export default function GameFilters() {
     const { setSearchTerm, activeFilters, setActiveFilters, sortOrder, setSortOrder } = useGameContext()
     const [localSearchTerm, setLocalSearchTerm] = useState('')
     const router = useRouter() // Access router for URL updates
@@ -136,14 +134,5 @@ function FiltersContent() {
                 </Select>
             </div>
         </div>
-    )
-}
-
-// Main component with Suspense
-export default function GameFilters() {
-    return (
-        <Suspense fallback={<div>Loading filters...</div>}>
-            <FiltersContent />
-        </Suspense>
     )
 }

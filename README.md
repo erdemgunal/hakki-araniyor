@@ -17,8 +17,8 @@ An interactive puzzle game where players solve mysteries by asking yes/no questi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/evet-hayir-oyunu.git
-cd evet-hayir-oyunu
+git clone https://github.com/erdemmgunal/hakki-araniyor.git
+cd hakki-araniyor
 ```
 
 2. Install dependencies:

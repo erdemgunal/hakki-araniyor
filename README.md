@@ -12,6 +12,7 @@ An interactive and fun mystery-solving puzzle game where players try to uncover 
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
+- [Last Viewed Games](#last-viewed-games)
 
 ## Installation
 
@@ -55,6 +56,17 @@ This game allows players to solve engaging mystery puzzles by asking yes/no ques
 - **Mobile-Responsive Design**: Optimized for use on both desktop and mobile devices.
 - **Hint System**: Get hints when you are stuck in solving the puzzle.
 - **Customizable Game Rules**: Players can create or modify the rules for an even more personalized experience.
+
+## Last Viewed Games
+
+Keep track of the puzzles you've recently played or viewed! This section will display the last few games or scenarios you've interacted with, making it easy to revisit them or continue solving the mysteries.
+
+- **Game 1**: [Title of the puzzle](#) - Short description or a link to continue playing.
+- **Game 2**: [Title of the puzzle](#) - Short description or a link to continue playing.
+- **Game 3**: [Title of the puzzle](#) - Short description or a link to continue playing.
+
+This section can be dynamically updated on the page to reflect your most recent activity within the game.
+
 
 ## Contributing
 

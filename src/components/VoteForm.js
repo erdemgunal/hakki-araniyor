@@ -19,11 +19,11 @@ const VoteForm = ({ handleVoteSubmit, vote, setVote, difficultyVote, setDifficul
                     <RadioGroup value={vote} onValueChange={setVote} className="flex gap-6">
                         <div className="flex items-center space-x-2">
                             <RadioGroupItem value="yes" id="yes" />
-                            <Label htmlFor="yes" className="text-green-600 font-medium">Evet</Label>
+                            <Label htmlFor="yes" className="text-gray-600 font-medium">Evet</Label>
                         </div>
                         <div className="flex items-center space-x-2">
                             <RadioGroupItem value="no" id="no" />
-                            <Label htmlFor="no" className="text-red-600 font-medium">Hayır</Label>
+                            <Label htmlFor="no" className="text-gray-600 font-medium">Hayır</Label>
                         </div>
                     </RadioGroup>
                 </div>
@@ -33,14 +33,14 @@ const VoteForm = ({ handleVoteSubmit, vote, setVote, difficultyVote, setDifficul
                     <RadioGroup value={difficultyVote} onValueChange={setDifficultyVote} 
                         className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                         {[
-                            { value: 'easy', label: 'Kolay', color: 'text-green-600' },
-                            { value: 'medium', label: 'Orta', color: 'text-yellow-600' },
-                            { value: 'hard', label: 'Zor', color: 'text-red-600' },
-                            { value: 'knew-answer', label: 'Cevabı Biliyordum', color: 'text-blue-600' }
+                            { value: 'easy', label: 'Kolay'},
+                            { value: 'medium', label: 'Orta'},
+                            { value: 'hard', label: 'Zor'},
+                            { value: 'knew-answer', label: 'Cevabı Biliyordum'}
                         ].map(({ value, label, color }) => (
                             <div key={value} className="flex items-center space-x-2">
                                 <RadioGroupItem value={value} id={value} />
-                                <Label htmlFor={value} className={`${color} font-medium`}>
+                                <Label htmlFor={value} className='text-gray-600 font-medium'>
                                     {label}
                                 </Label>
                             </div>

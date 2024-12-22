@@ -2,7 +2,7 @@
   {
     "gameName": "Bir maç",
     "question": "Çıplak bir adam çölün ortasında, elinde bir kibritle ölü olarak yatmaktadır. Ne olmuş olabilir? Bir adam çölde ölü bulunur. Çıplaktır ve diğer şeylerin yanı sıra birçok giysisi etrafına dağılmıştır. Elinde bir kibrit vardır. Nasıl ölmüş olabilir?",
-    "answer": "Birkaç kişiyle birlikte bir sıcak hava balonuyla çölü geçiyordu. Balon delinmiş ve irtifa kaybetmeye başlamışlar. Gerekli olmayan tüm eşyalarını, ardından giysilerini ve yiyeceklerini denize atmışlar ama yine de çölün ortasına çakılacaklarmış. Sonunda, kimin kenardan atlayıp diğerlerini kurtaracağını görmek için kibrit çekmişler; bu adam kaybetmiş.",
+    "answer": "Birkaç kişiyle birlikte bir sıcak hava balonuyla çölü geçiyordu. Balon delinmiş ve irtifa kaybetmeye başlamışlar. Gerekli olmayan tüm eşyalarını, ardından giysilerini ve yiyeceklerini denize atmışlar ama yine de çölün ortasına düşeceklerdi. Sonunda, kimin kenardan atlayıp diğerlerini kurtaracağını görmek için kibrit çekmişler; bu adam kaybetmişti.",
     "image": "a_match.svg",
     "tags": [
       "Dedektiflik",
@@ -38,7 +38,7 @@
   {
     "gameName": "Açık bir kapı",
     "question": "Martin o sabah uyandığında kapıyı açık görünce şaşırdı. Eşiği geçer geçmez kafası kesildi.",
-    "answer": "Martin dört aydır kafesinde yaşayan bir kanaryaydı. Silvester - bir kedi - Martin'i yakalayıp yemek için fırsat kolluyordu. Sahibi kafesin kapısını yanlışlıkla açık bıraktığında Martin kafesten dışarı uçtu ve Silvester onun küçük kafasını ısırarak kopardı.",
+    "answer": "Martin dört aydır kafesinde yaşayan bir kanaryaydı. Silvester adlı bir kedi, Martin'i yakalayıp yemek için fırsat kolluyordu. Sahibi kafesin kapısını yanlışlıkla açık bıraktığında Martin kafesten dışarı uçtu ve Silvester onun küçük kafasını ısırarak kopardı.",
     "image": "an_open_door.svg",
     "tags": [
       "Dedektiflik",
@@ -57,7 +57,7 @@
   {
     "gameName": "Kaza",
     "question": "Bir araba sürücüsü, kavşakta beklenmedik bir dönüş yaparken bir bisiklete çarparak kazaya neden olur. Polisler geldiğinde, başka bir adam tutuklanır. Arabayı kullanan kişi evine götürülür.",
-    "answer": "Sürücü sürüş dersleri alıyordu ve eğitmeni ona bir kavşakta yanlış bir dönüş yapmasını ve bir bisiklete çarpmasını söyledi. Polisler sürücü eğitmeninin kazadan sorumlu olduğunu düşünerek onu tutukladılar ve öğrenciyi evine götürdüler.",
+    "answer": "Sürücü sürüş dersleri alıyordu ve eğitmeni ona bir kavşakta yanlış bir dönüş yapmasını ve bir bisiklete çarpmasını söyledi. Polisler, sürücü eğitmeninin kazadan sorumlu olduğunu düşünerek onu tutukladılar ve öğrenciyi evine götürdüler.",
     "image": "the_accident.svg",
     "tags": [
       "Gerçek",
@@ -75,7 +75,7 @@
   {
     "gameName": "Elektrik kesintisi",
     "question": "İş yerinde çalışan bir kadın aşağıya inerken aniden elektrikler kesilir. Tam o anda kocasının ölmek üzere olduğunu fark eder.",
-    "answer": "Kadın bir hastanede elektrikçi olarak çalışıyordu ve acil durum jeneratörlerinin bozuk olduğunu biliyordu. Kocası bir trafik kazası geçirmişti ve o hastanede kendisini hayatta tutan bir makineye bağlıydı. Elektrik kesintisi olduğunda kocasının kendi başına nefes alamadığını ve dolayısıyla ölmekte olduğunu biliyordu.",
+    "answer": "Kadın bir hastanede elektrikçi olarak çalışıyordu ve acil durum jeneratörlerinin bozuk olduğunu biliyordu. Kocası bir trafik kazası geçirmişti ve o hastanede kendisini hayatta tutan bir makineye bağlıydı. Elektrik kesintisi olduğunda kocasının kendi başına nefes alamadığını ve dolayısıyla ölmekte olduğunu fark etti.",
     "image": "the_blackout.svg",
     "tags": [
       "Dedektiflik",
@@ -127,7 +127,7 @@
   {
     "gameName": "Çözülmemiş bir soygun",
     "question": "Bir adam bir eczaneye girer ve kısa bir süre sonra kasadaki parayla birlikte çıkar. Eczane sahibi karakolu arar ve bir süre sonra bir polis memuru parayı geri alır ve adamı götürür. O akşam üç kişi hırsızlık ihbarında bulunmak üzere karakola gider.",
-    "answer": "Adam eczane sahibinin oğluydu. Arabası çalınmıştı ve önemli bir sınavı vardı. Taksiye binebilmek için annesinden biraz para istemek üzere eczaneye gitmişti. Buna ek olarak, anne polis memuru olan kocasını aramış ve ondan oğullarını sınava getirmesini istemişti. Kocası parayı getirdi ve oğlunun artık paraya ihtiyacı olmadığı için parayı babasına verdi, o da annesine iade etti. Günün sonunda tüm aile araba hırsızlığını ihbar etti.",
+    "answer": "Adam eczane sahibinin oğluydu. Arabası çalınmıştı ve önemli bir sınavı vardı. Taksiye binebilmek için annesinden biraz para istemek üzere eczaneye gitmişti. Buna ek olarak, anne polis memuru olan kocasını aramış ve ondan oğullarını sınava götürmesini istemişti. Kocası parayı getirdi ve oğlunun artık paraya ihtiyacı olmadığı için parayı babasına verdi, o da annesine iade etti. Günün sonunda tüm aile araba hırsızlığını ihbar etti.",
     "image": "an_unsolved_robbery.svg",
     "tags": [
       "Dedektiflik"
@@ -213,7 +213,7 @@
   {
     "gameName": "Huzursuz uyku",
     "question": "Paul eve yorgun gelir. Odasına gider ve uyumak için ışığı kapatır. Bir süre sonra kendini huzursuz hissederek ışığı açar ve etrafına bakınır. Işığı tekrar kapatır ve tekrar uyumaya çalışır. Bunu birkaç kez tekrarladıktan sonra yatağının altına bakar ve bir ceset bulur.",
-    "answer": "Bir hırsız Paul'ün evinden hırsızlık yapıyordu. Paul eve geldiğinde hırsız yatağın altına saklanmıştı. Gerilim çok fazla oldu ve hırsız ani bir kalp krizi geçirdi Paul hırsızın kol saatinin tik takları yüzünden uyuyamıyordu.",
+    "answer": "Bir hırsız Paul'ün evinden hırsızlık yapıyordu. Paul eve geldiğinde hırsız yatağın altına saklanmıştı. Gerilim çok fazla oldu ve hırsız ani bir kalp krizi geçirdi. Paul hırsızın kol saatinin tik takları yüzünden uyuyamıyordu.",
     "image": "restless_sleep.svg",
     "tags": [
       "Dedektiflik",

@@ -1,6 +1,6 @@
 # Yes/No Game (Evet Hayır Oyunu)
 
-![Next.js](https://img.shields.io/badge/Next.js-13.0-black)
+![Next.js](https://img.shields.io/badge/Next.js-15.1.2-black)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 An interactive puzzle game where players solve mysteries by asking yes/no questions. Built with Next.js and modern web technologies.

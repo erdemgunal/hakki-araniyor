@@ -2,6 +2,7 @@ import GameFilters from '@/components/GameFilters'
 import GameGrid from '@/components/GameGrid'
 import Categories from '@/components/Categories'
 import { GameProvider } from '@/components/GameContext'
+import LastViewedGames from '@/components/LastViewedGames'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           <GameFilters />
           <GameGrid />
           <Categories />
+          <LastViewedGames />
         </main>
       </div>
     </GameProvider>

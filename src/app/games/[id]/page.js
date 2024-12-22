@@ -7,6 +7,8 @@ import VoteForm from '@/components/VoteForm';
 import GameCard from "@/components/GameCard";
 import ErrorAlert from "@/components/ui/error-alert";
 import LoadingSkeleton from '@/components/LoadingSkeleton';
+import { addLastViewedGame } from '@/lib/lastViewedGames';
+import LastViewedGames from '@/components/LastViewedGames'
 
 export default function GamePage({ params }) {
     const [game, setGame] = useState(null);
@@ -60,6 +62,7 @@ export default function GamePage({ params }) {
                     }
 
                     setGame(fetchedGame);
+                    addLastViewedGame(fetchedGame);
                     const questionHeight = getContainerHeight(fetchedGame.question);
                     const answerHeight = getContainerHeight(fetchedGame.answer);
                     setTextHeight(questionHeight > answerHeight ? questionHeight : answerHeight);
@@ -155,6 +158,7 @@ export default function GamePage({ params }) {
                     currentGame={game}
                     relatedGames={relatedGamesList}
                 />
+                <LastViewedGames />
             </main>
         </div>
     );

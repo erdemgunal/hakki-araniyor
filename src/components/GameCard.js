@@ -103,7 +103,7 @@ export default function GameCard({ game, handleShare, showAnswer, setShowAnswer,
                     </div>
                 )}
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-xs sm:text-sm text-gray-600 mb-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-xs sm:text-sm text-gray-600 mb-6 mt-6">
                     <div className="flex items-center bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
                         <BarChart className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-primary" />
                         <span>Zorluk: {game.difficulty || 'N/A'}/10</span>

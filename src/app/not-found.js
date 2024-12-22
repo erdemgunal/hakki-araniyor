@@ -8,7 +8,6 @@ import Header from "@/components/Header";
 export default function NotFound() {
 return (
     <div className="min-h-screen bg-background">
-        <Header />
         <main className="container mx-auto px-4 py-8">
             <div className="flex flex-col items-center justify-center text-center">
                 <div className="relative w-96 h-96 mb-8">
@@ -34,7 +33,6 @@ return (
                 </Link>
             </div>
         </main>
-        <Footer />
     </div>
 );
 }

@@ -1,6 +1,4 @@
 import React from 'react'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
 
 export default function About() {
   const sections = [
@@ -28,7 +26,6 @@ export default function About() {
 
   return (
     <>
-      <Header />
       <div className="bg-black text-white w-full p-6 space-y-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">Hakkımızda</h1>
@@ -41,7 +38,6 @@ export default function About() {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   )
 }

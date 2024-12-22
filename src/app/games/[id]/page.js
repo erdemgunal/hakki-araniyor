@@ -1,13 +1,10 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { getGameById } from "@/lib/getGameById";
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import RelatedGames from "@/components/RelatedGames";
 import { getRelatedGames } from "@/lib/getRelatedGames";
 import VoteForm from '@/components/VoteForm';
 import GameCard from "@/components/GameCard";
-import TextureBackground from "@/components/ui/texture-background"
 import ErrorAlert from "@/components/ui/error-alert";
 import LoadingSkeleton from '@/components/LoadingSkeleton';
 
@@ -142,8 +139,6 @@ export default function GamePage({ params }) {
 
     return (
         <div className="min-h-screen flex flex-col">
-            <TextureBackground />
-            <Header />
             <main className="container mx-auto px-4 py-8 flex-grow">
                 <GameCard game={game} handleShare={handleShare} showAnswer={showAnswer} setShowAnswer={setShowAnswer} textHeight={textHeight} />
 
@@ -161,7 +156,6 @@ export default function GamePage({ params }) {
                     relatedGames={relatedGamesList}
                 />
             </main>
-            <Footer />
         </div>
     );
 }

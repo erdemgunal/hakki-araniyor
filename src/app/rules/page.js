@@ -1,14 +1,12 @@
 import React from 'react'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
 
 export default function Rules() {
     const sections = [
         {
             title: "Oyuncular",
             content: "2 veya daha fazla kişiden oluşan herhangi bir grup bir durum bulmacası oynayabilir. İlk olarak, sunucuyu seçmelisiniz.",
-            color: 'bg-indigo-100', // Example color
-            titleColor: 'text-indigo-600', // Example title color
+            color: 'bg-indigo-100',
+            titleColor: 'text-indigo-600',
         },
         {
             title: "Durumu okuyun",
@@ -56,7 +54,6 @@ export default function Rules() {
 
     return (
         <>
-            <Header />
             <div className="max-w-4xl mx-auto p-6 space-y-8">
                 <h1 className="text-4xl font-bold text-center text-blue-600">Oyun Kuralları</h1>
                 
@@ -69,7 +66,6 @@ export default function Rules() {
                     </section>
                 ))}
             </div>
-            <Footer />
         </>
     )
 }

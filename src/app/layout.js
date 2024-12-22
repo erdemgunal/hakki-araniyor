@@ -1,4 +1,6 @@
 import { Noto_Serif } from "next/font/google";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const notoSerif = Noto_Serif({
@@ -18,7 +20,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${notoSerif.className} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

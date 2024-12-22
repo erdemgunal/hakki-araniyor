@@ -13,7 +13,6 @@ const ErrorAlert = ({ error }) => {
 
     return (
         <div className="min-h-screen bg-background flex flex-col">
-            <Header />
             <main className="container mx-auto px-4 py-16 flex-grow flex flex-col items-center justify-center gap-6">
                 <Alert variant="destructive">
                     <AlertDescription>{error || "Game not found"}</AlertDescription>
@@ -22,7 +21,6 @@ const ErrorAlert = ({ error }) => {
                     Ana Sayfaya Dön
                 </Button>
             </main>
-            <Footer />
         </div>
     );
 };

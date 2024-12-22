@@ -760,8 +760,8 @@
   },
   {
     "gameName": "Biraz para basmak ister misiniz?",
-    "question": "Bir adam, içine renkli kağıt yerleştirebileceğiniz ve ardından ideal 100$'ı alabileceğiniz bir cihaz tasarladı. Uzmanlar bunları gerçeklerinden ayırt edemiyor. Bunu nasıl yapıyor ve neden bu cihazı satıyor?",
-    "answer": "Adam bu cihazı hırsıza satar ve onu gerçeklerinden ayırt edilemeyen sahte dolarlar bastığına ikna eder. Makinenin içine yeşil kağıt yerleştirerek makineyi gösterir. Ancak yeşil kağıt - bu aslında gerçek 100$'dır, ancak zengin bir şekilde yeşile boyanmıştır. Makine sadece üzerlerindeki yeşil boyayı çıkarır.",
+    "question": "Bir adam, içine renkli bir kağıt yerleştirip ardından mükemmel bir şekilde basılmış 100 dolarlık bir banknot alabileceğiniz bir cihaz tasarladı. Uzmanlar bu banknotları gerçeklerinden ayırt edemiyor. Bu adam bunu nasıl yapıyor ve neden bu cihazı satıyor?",
+    "answer": "Adam, bu cihazı bir hırsıza satar ve makinenin gerçeklerinden ayırt edilemeyen sahte dolarlar bastığına onu ikna eder. Makinenin çalışma prensibini göstermek için yeşil kağıt kullanır. Ancak bu yeşil kağıt aslında gerçek 100 dolardır, yalnızca yoğun bir şekilde yeşile boyanmıştır. Makine, yalnızca üzerindeki yeşil boyayı temizler ve geriye gerçek bir 100 dolar kalır.",
     "image": "want_to_print_some_cash.svg",
     "tags": [
       "Çocuklar için",

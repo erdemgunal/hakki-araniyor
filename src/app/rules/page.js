@@ -34,7 +34,7 @@ export default function Rules() {
         },
         {
             title: "Puanla",
-            content: "Have solved it? Rate the riddle to help other users to find the most interesting situation puzzles.",
+            content: "Çözdünüz mü? Diğer kullanıcıların en ilginç durum bulmacalarını bulmalarına yardımcı olmak için bilmeceyi değerlendirin.",
             color: 'bg-purple-100',
             titleColor: 'text-purple-600',
             icon: <Star className="text-purple-600 w-12 h-12" />,

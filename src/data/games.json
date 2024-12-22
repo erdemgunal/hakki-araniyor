@@ -2314,7 +2314,7 @@
     "gameName": "Komik bir serseri",
     "question": "Kapı zili çalar. Bill kapıyı açar. Eşikte yerel bir serseri görür.  \"Merhaba,\" diyor serseri, \"her zamanki gibi çöp çukurlarını dolaşıyordum ve birinde içinde 1.000 dolar ve kimliğiniz olan bir cüzdan buldum. Yanlışlıkla atmış olmalısınız.\" \"Doğru!\" diyor Bill sevinçle. \"Cüzdanım! Çok teşekkür ederim!\" \"Lütfen içindekileri kontrol edin.\" diye sorar serseri. \"Bin dolar bile var!\" diye onaylıyor Bill, banknotları aceleyle sayarak. Sonra paketten 20 dolarlık bir banknot çıkarır ve serseriye verir, \"Bu da benden teşekkür!\"  Birbirlerinden oldukça memnun bir şekilde ayrılırlar.  \"Kimdi o?\" Bill'in karısı sorar.  Bill güler ve olanları karısına anlatır. Neden komikmiş?",
     "answer": "Cüzdanı geri verirken, serserinin minnettarlık duyacağına dair büyük umutları vardı. Ama Bill'in elinde bozuk para olmama ihtimali vardı. Cüzdanda sadece 100 dolarlık banknotlar vardı. Bill bu kadar büyük bir meblağı ödemeyi kabul eder miydi? Ve serseri akıllıca bir karar verdi. Cüzdanı geri vermeden önce, yüzlüğü daha küçük banknotlarla değiştirdi - 5, 10, 20, 50, böylece Bill'in kendisine teşekkür edeceği miktarı seçebileceğine karar verdi.   Bill'i güldüren serserinin öngörüsüydü.",
-    "image": "a_Komik_vagrant.svg",
+    "image": "a_funny_vagrant.svg",
     "tags": [
       "Yetişkinler için"
     ],
@@ -2947,7 +2947,7 @@
     "gameName": "Geç kalmayın!",
     "question": "Bill bir doğum günü partisine geç kaldı ve bu yüzden hapse girdi. Ne oldu peki?",
     "answer": "Bir rahibin doğum günüydü. Kadeh kaldırırken, kendisine itirafta bulunan ilk kişinin bir katil olduğunu söyledi. Bill doğum günü partisine biraz sonra geldi. Rahibin şerefine kadeh kaldırırken, tüm konuklara ona itirafta bulunan ilk kişinin kendisi olduğunu söyledi.",
-    "image": "don't_be_late.svg",
+    "image": "dont_be_late.svg",
     "tags": [
       "Dedektiflik",
       "Karanlık hikayeler"

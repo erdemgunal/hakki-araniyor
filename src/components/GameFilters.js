@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react'
 import { useGameContext } from './GameContext'
-import { useRouter, useSearchParams } from 'next/navigation' // Import for URL handling
+import { useRouter, useSearchParams } from 'next/navigation'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import {
@@ -15,28 +15,24 @@ import {
 export default function GameFilters() {
     const { setSearchTerm, activeFilters, setActiveFilters, sortOrder, setSortOrder } = useGameContext()
     const [localSearchTerm, setLocalSearchTerm] = useState('')
-    const router = useRouter() // Access router for URL updates
-    const searchParams = useSearchParams() // Access current URL parameters
+    const router = useRouter()
+    const searchParams = useSearchParams()
 
     const handleSearch = () => {
         const current = new URLSearchParams(Array.from(searchParams.entries()))
 
-        // Update the search term in the URL
         if (localSearchTerm) {
             current.set('search', localSearchTerm)
         } else {
             current.delete('search')
         }
 
-        // Reset page to 1
         current.set('page', '1')
 
-        // Push the updated URL
         const search = current.toString()
         const newURL = `${window.location.pathname}${search ? `?${search}` : ''}`
         router.push(newURL, { scroll: false })
 
-        // Update the context
         setSearchTerm(localSearchTerm)
     }
 
@@ -45,17 +41,13 @@ export default function GameFilters() {
         const difficultyFilters = ['easy', 'medium', 'hard']
         let updatedFilters = [...activeFilters]
 
-        // If clicking on a difficulty filter
         if (difficultyFilters.includes(filter)) {
-            // Remove all existing difficulty filters
             updatedFilters = updatedFilters.filter(f => !difficultyFilters.includes(f))
             
-            // Add new filter only if it's not the one we just removed
             if (!activeFilters.includes(filter)) {
                 updatedFilters.push(filter)
             }
         } else {
-            // Handle non-difficulty filters (if you have any) as before
             if (updatedFilters.includes(filter)) {
                 const index = updatedFilters.indexOf(filter)
                 updatedFilters.splice(index, 1)
@@ -64,21 +56,18 @@ export default function GameFilters() {
             }
         }
 
-        // Update the filters in the URL
         if (updatedFilters.length > 0) {
             current.set('filters', updatedFilters.join(','))
         } else {
             current.delete('filters')
         }
 
-        // Reset page to 1
         current.set('page', '1')
 
         const search = current.toString()
         const newURL = `${window.location.pathname}${search ? `?${search}` : ''}`
         router.push(newURL, { scroll: false })
 
-        // Update the context
         setActiveFilters(updatedFilters)
     }
 
@@ -113,22 +102,18 @@ export default function GameFilters() {
                 <Select value={sortOrder} onValueChange={(value) => {
                     const current = new URLSearchParams(Array.from(searchParams.entries()))
 
-                    // Update sort order in the URL
                     if (value) {
                         current.set('sort', value)
                     } else {
                         current.delete('sort')
                     }
 
-                    // Reset page to 1
                     current.set('page', '1')
 
-                    // Push the updated URL
                     const search = current.toString()
                     const newURL = `${window.location.pathname}${search ? `?${search}` : ''}`
                     router.push(newURL, { scroll: false })
 
-                    // Update the context
                     setSortOrder(value)
                 }}>
                     <SelectTrigger className="w-[180px]">

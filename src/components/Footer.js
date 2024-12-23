@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Facebook, Twitter, Instagram, ExternalLink } from 'lucide-react'
+import { Facebook, Twitter, Instagram, ExternalLink, Github } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">"Hakkı Aranıyor" Hakkımızda</h3>
             <p className="text-white text-sm leading-6">
-              Hakkı Aranıyor, dedektiflik becerilerinizi zorlayan gizemli bir bulmaca oyunudur. İlgi çekici vakaları çözün ve gerçeği ortaya çıkarın!
+              Hakkı Aranıyor, dedektiflik becerilerinizi zorlayan gizemli bir açık kaynak bulmaca oyunudur. İlgi çekici vakaları çözün ve gerçeği ortaya çıkarın!
             </p>
           </div>
 
@@ -45,6 +45,15 @@ export default function Footer() {
               <li>
                 <Link href="/terms" className="hover:text-white/70 text-white text-sm">
                   Hizmet Koşulları
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/erdemmgunal/hakki-araniyor"
+                  className="hover:text-white/70 flex items-center text-white text-sm"
+                  target="_blank"
+                >
+                  Açık Kaynak - GitHub <Github className="ml-1" size={16} />
                 </Link>
               </li>
             </ul>

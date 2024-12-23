@@ -60,26 +60,30 @@ export default function Footer() {
           </div>
 
           {/* Contact Us Section */}
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Bizimle İletişime Geçin</h3>
-            <div className="flex justify-center md:justify-start space-x-6">
-              <Link href="#" className="text-white hover:text-white">
-                <Facebook size={20} />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-white hover:text-white">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-white hover:text-white">
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
-              </Link>
-            </div>
-          </div>
-        </div>
+                <div>
+                <h3 className="text-lg font-bold mb-4 text-white">Bizimle İletişime Geçin</h3>
+                <div className="flex justify-center md:justify-start space-x-6">
+                  <Link href="#" className="text-white hover:text-white">
+                  <Facebook size={20} />
+                  <span className="sr-only">Facebook</span>
+                  </Link>
+                  <Link href="#" className="text-white hover:text-white">
+                  <Twitter size={20} />
+                  <span className="sr-only">Twitter</span>
+                  </Link>
+                  <Link href="#" className="text-white hover:text-white">
+                  <Instagram size={20} />
+                  <span className="sr-only">Instagram</span>
+                  </Link>
+                  <Link href="https://github.com/erdemmgunal/" className="text-white hover:text-white">
+                  <Github size={20} />
+                  <span className="sr-only">GitHub</span>
+                  </Link>
+                </div>
+                </div>
+              </div>
 
-        {/* Copyright Section */}
+              {/* Copyright Section */}
         <div className="mt-8 text-center text-white/70 text-sm">
           <p>&copy; {new Date().getFullYear()} Hakkı Aranıyor. Tüm hakları saklıdır.</p>
         </div>

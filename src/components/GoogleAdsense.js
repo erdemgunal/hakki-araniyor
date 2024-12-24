@@ -2,7 +2,7 @@ import Script from 'next/script';
 
 export default function GoogleAdsense({ pId }) {
     // Use more specific environment check
-    if (process.env.NEXT_PUBLIC_ADSENSE_ID == null || process.env.NODE_ENV !== "production") {
+    if (process.env.NODE_ENV !== "production") {
         return null;
     }
 

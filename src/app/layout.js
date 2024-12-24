@@ -1,6 +1,7 @@
 import { Noto_Serif } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import GoogleAdsense from "@/components/GoogleAdsense";
 import "./globals.css";
 
 const notoSerif = Noto_Serif({
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
       </body>
+      <GoogleAdsense />
     </html>
   );
 }

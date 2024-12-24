@@ -27,7 +27,7 @@ export const metadata = {
     description: 'Eğlenceli durum bulmacası oyununun kurallarını öğrenin',
   },
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_DOMAIN}/rules`
+    canonical: 'https://hakki-araniyor.vercel.app/rules',
   }
 };
 

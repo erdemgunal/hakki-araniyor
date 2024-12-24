@@ -5,31 +5,31 @@ export default function sitemap() {
     
     const staticPages = [
         {
-            url: process.env.NEXT_PUBLIC_DOMAIN,
+            url: 'https://hakki-araniyor.vercel.app',
             lastModified: currentDate,
             changeFrequency: 'daily',
             priority: 1.0,
         },
         {
-            url: `${process.env.NEXT_PUBLIC_DOMAIN}/about`,
+            url: 'https://hakki-araniyor.vercel.app/about',
             lastModified: currentDate,
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: `${process.env.NEXT_PUBLIC_DOMAIN}/privacy`,
+            url: 'https://hakki-araniyor.vercel.app/privacy',
             lastModified: currentDate,
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: `${process.env.NEXT_PUBLIC_DOMAIN}/rules`,
+            url: 'https://hakki-araniyor.vercel.app/rules',
             lastModified: currentDate,
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: `${process.env.NEXT_PUBLIC_DOMAIN}/terms`,
+            url: 'https://hakki-araniyor.vercel.app/terms',
             lastModified: currentDate,
             changeFrequency: 'monthly',
             priority: 0.8,
@@ -37,7 +37,7 @@ export default function sitemap() {
     ];
 
     const gamePages = gamesData.map((game) => ({
-        url: `${process.env.NEXT_PUBLIC_DOMAIN}/games/${game.id}`,
+        url: `https://hakki-araniyor.vercel.app/games/${game.id}`,
         lastModified: currentDate,
         changeFrequency: 'daily',
         priority: 0.9,

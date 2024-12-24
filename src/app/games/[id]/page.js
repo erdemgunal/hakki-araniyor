@@ -147,13 +147,13 @@ export default function GamePage({ params }) {
                 <title>{game.gameName} | Hakkı Aranıyor</title>
                 <meta name="description" content={`Bu evet/hayır bilmecesini çözebilir misiniz?: ${game.question}`} />
                 <meta name="robots" content="index, follow" />
-                <link rel="canonical" href={`${process.env.NEXT_PUBLIC_DOMAIN}/games/${id}`} />
+                <link rel="canonical" href={`https://hakki-araniyor.vercel.app/games/${id}`} />
                 
                 {/* OpenGraph metadata */}
                 <meta property="og:title" content={`${game.gameName} | Hakkı Aranıyor`} />
                 <meta property="og:description" content={`Bu evet/hayır bilmecesini çözebilir misiniz?: ${game.question}`} />
                 <meta property="og:type" content="game" />
-                <meta property="og:url" content={`${process.env.NEXT_PUBLIC_DOMAIN}/games/${id}`} />
+                <meta property="og:url" content={`https://hakki-araniyor.vercel.app/games/${id}`} />
                 
                 {/* Twitter metadata */}
                 <meta name="twitter:card" content="summary" />

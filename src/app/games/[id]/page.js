@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 import { getGameById } from "@/lib/getGameById";
 import RelatedGames from "@/components/RelatedGames";
 import { getRelatedGames } from "@/lib/getRelatedGames";
@@ -142,6 +143,36 @@ export default function GamePage({ params }) {
 
     return (
         <div className="min-h-screen flex flex-col">
+            <Head>
+                <title>{game.gameName} | Hakkı Aranıyor</title>
+                <meta name="description" content={`Bu evet/hayır bilmecesini çözebilir misiniz?: ${game.question}`} />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href={`${process.env.NEXT_PUBLIC_DOMAIN}/games/${id}`} />
+                
+                {/* OpenGraph metadata */}
+                <meta property="og:title" content={`${game.gameName} | Hakkı Aranıyor`} />
+                <meta property="og:description" content={`Bu evet/hayır bilmecesini çözebilir misiniz?: ${game.question}`} />
+                <meta property="og:type" content="game" />
+                <meta property="og:url" content={`${process.env.NEXT_PUBLIC_DOMAIN}/games/${id}`} />
+                
+                {/* Twitter metadata */}
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content={`${game.gameName} | Hakkı Aranıyor`} />
+                <meta name="twitter:description" content={`Bu evet/hayır bilmecesini çözebilir misiniz?: ${game.question}`} />
+                
+                {/* Structured data for search engines */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Game",
+                        "name": game.gameName,
+                        "description": game.question,
+                        "genre": "Puzzle",
+                        "keywords": game.tags?.join(", ")
+                    })}
+                </script>
+            </Head>
+
             <main className="container mx-auto px-4 py-8 flex-grow">
                 <GameCard game={game} handleShare={handleShare} showAnswer={showAnswer} setShowAnswer={setShowAnswer} textHeight={textHeight} />
 

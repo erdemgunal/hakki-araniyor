@@ -1,3 +1,12 @@
+export const metadata = {
+  title: 'Hizmet Şartları | Hakkı Aranıyor',
+  description: 'Hakkı Aranıyor web sitesinin kullanım şartları ve koşulları. Kullanıcı hakları, sorumluluklar ve yasal bilgiler.',
+  openGraph: {
+    title: 'Hizmet Şartları | Hakkı Aranıyor',
+    description: 'Hakkı Aranıyor web sitesinin kullanım şartları ve koşulları.',
+  }
+}
+
 import React from 'react'
 
 export default function TermsOfService() {
@@ -30,22 +39,37 @@ export default function TermsOfService() {
   ]
 
   return (
-    <>
-      <div className="max-w-4xl mx-auto px-8 py-6 space-y-8">
-        <h1 className="text-4xl font-bold text-center text-blue-600">Hizmet Şartları</h1>
+    <main>
+      <article className="max-w-4xl mx-auto px-8 py-6 space-y-8">
+        <header>
+          <h1 className="text-4xl font-bold text-center text-blue-600">Hizmet Şartları</h1>
+        </header>
 
-        <ul className="space-y-6">
+        <section>
           {terms.map((term, index) => (
-            <li
+            <article
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg"
+              className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg mb-6"
             >
               <h2 className="text-2xl font-semibold text-gray-800">{term.title}</h2>
-              <p className="text-gray-700 mt-2 leading-relaxed">{term.content}</p>
-            </li>
+              <div className="text-gray-700 mt-2 leading-relaxed">{term.content}</div>
+            </article>
           ))}
-        </ul>
-      </div>
-    </>
+        </section>
+      </article>
+
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Hizmet Şartları",
+          "description": "Hakkı Aranıyor web sitesinin kullanım şartları ve koşulları.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hakkı Aranıyor"
+          }
+        })}
+      </script>
+    </main>
   )
 }

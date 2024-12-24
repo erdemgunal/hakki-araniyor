@@ -1,5 +1,15 @@
 import React from 'react'
 
+export const metadata = {
+  title: 'Hakkımızda - Evet Hayır Oyunu',
+  description: 'Problem çözme becerilerini geliştiren interaktif bulmaca oyunları. Eğlenceli ve düşündürücü bir deneyim ile beyin egzersizi yapın.',
+  openGraph: {
+    title: 'Hakkımızda - Evet Hayır Oyunu',
+    description: 'Problem çözme becerilerini geliştiren interaktif bulmaca oyunları.',
+    type: 'website',
+  }
+}
+
 export default function About() {
   const sections = [
     {
@@ -25,19 +35,28 @@ export default function About() {
   ];
 
   return (
-    <>
-      <div className="bg-black text-white w-full p-6 space-y-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">Hakkımızda</h1>
-          
-          {sections.map((section, index) => (
-            <section key={index} className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg mb-4">
-              <h2 className="text-2xl font-semibold text-gray-800">{section.title}</h2>
-              <p className="text-gray-700 mt-2 leading-relaxed">{section.content}</p>
-            </section>
-          ))}
-        </div>
-      </div>
-    </>
+    <main className="bg-black text-white w-full p-6 space-y-8">
+      <article className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">Hakkımızda</h1>
+        
+        {sections.map((section, index) => (
+          <section 
+            key={index} 
+            className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg mb-4"
+            itemScope 
+            itemType="https://schema.org/WebPageElement"
+          >
+            <h2 
+              className="text-2xl font-semibold text-gray-800"
+              itemProp="name"
+            >{section.title}</h2>
+            <div 
+              className="text-gray-700 mt-2 leading-relaxed"
+              itemProp="text"
+            >{section.content}</div>
+          </section>
+        ))}
+      </article>
+    </main>
   )
 }

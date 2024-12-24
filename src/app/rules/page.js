@@ -1,4 +1,6 @@
 import React from 'react';
+import { Metadata } from 'next';
+import Script from 'next/script';
 import {
   Users,
   BookOpen,
@@ -8,6 +10,26 @@ import {
   MapPin,
   Info,
 } from 'lucide-react';
+
+export const metadata = {
+  title: 'Hakkı Aranıyor Oyunu Kuralları | Durum Bulmacaları',
+  description: 'Hakkı Aranıyor oyununun kurallarını öğrenin. 2 veya daha fazla kişiyle oynayabileceğiniz, eğlenceli ve zeka geliştiren bir durum bulmacası oyunu.',
+  keywords: 'Hakkı Aranıyor oyunu, durum bulmacaları, mantık oyunları, beyin egzersizi, grup oyunları',
+  openGraph: {
+    title: 'Hakkı Aranıyor Oyunu Kuralları',
+    description: 'Eğlenceli durum bulmacası oyununun kurallarını öğrenin',
+    type: 'website',
+    locale: 'tr_TR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hakkı Aranıyor Oyunu Kuralları',
+    description: 'Eğlenceli durum bulmacası oyununun kurallarını öğrenin',
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_DOMAIN}/rules`
+  }
+};
 
 export default function Rules() {
     const sections = [
@@ -69,23 +91,65 @@ export default function Rules() {
         }
     ];
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Hakkı Aranıyor Oyunu Nasıl Oynanır",
+        "description": "Hakkı Aranıyor durum bulmacası oyununun kuralları ve nasıl oynanacağı",
+        "step": sections.map((section, index) => ({
+            "@type": "HowToStep",
+            "position": index + 1,
+            "name": section.title,
+            "text": section.content
+        }))
+    };
+
     return (
         <>
-            <div className="max-w-4xl mx-auto p-6 space-y-8">
-                <h1 className="text-4xl font-bold text-center text-blue-600 mb-4">Oyun Kuralları</h1>
-                
-                {sections.map((section, index) => (
-                    <section 
-                        key={index} 
-                        className={`${section.color} p-6 rounded-lg shadow-md flex items-center space-x-4 hover:bg-opacity-80 hover:shadow-lg transition-all`}>
-                        <div>{section.icon}</div>
-                        <div>
-                            <h2 className={`text-2xl font-semibold ${section.titleColor}`}>{section.title}</h2>
-                            <p className="text-gray-700 mt-2 leading-relaxed">{section.content}</p>
-                        </div>
-                    </section>
-                ))}
-            </div>
+            <Script
+                id="json-ld"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <main role="main" itemScope itemType="https://schema.org/HowTo">
+                <div className="max-w-4xl mx-auto p-6 space-y-8">
+                    <header>
+                        <h1 
+                            className="text-4xl font-bold text-center text-blue-600 mb-4"
+                            itemProp="name">
+                            Hakkı Aranıyor Oyunu Kuralları
+                        </h1>
+                        <meta itemProp="description" content="Hakkı Aranıyor oyununun resmi kuralları ve nasıl oynanacağı hakkında detaylı bilgi." />
+                    </header>
+                    
+                    <article className="rules-content">
+                        {sections.map((section, index) => (
+                            <section 
+                                key={index} 
+                                className={`${section.color} p-6 rounded-lg shadow-md flex items-center space-x-4 hover:bg-opacity-80 hover:shadow-lg transition-all`}
+                                aria-labelledby={`section-${index}`}
+                                itemProp="step"
+                                itemScope
+                                itemType="https://schema.org/HowToStep">
+                                <div className="icon-wrapper" aria-hidden="true">{section.icon}</div>
+                                <div>
+                                    <h2 
+                                        id={`section-${index}`}
+                                        className={`text-2xl font-semibold ${section.titleColor}`}
+                                        itemProp="name">
+                                        {section.title}
+                                    </h2>
+                                    <p 
+                                        className="text-gray-700 mt-2 leading-relaxed"
+                                        itemProp="text">
+                                        {section.content}
+                                    </p>
+                                </div>
+                            </section>
+                        ))}
+                    </article>
+                </div>
+            </main>
         </>
     )
 }

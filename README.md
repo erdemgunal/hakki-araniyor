@@ -50,12 +50,9 @@ This game allows players to solve engaging mystery puzzles by asking yes/no ques
 
 ## Features
 
-- **Interactive Puzzle Solving**: Engage in problem-solving by asking yes/no questions.
 - **Multiple Language Support**: Play in different languages to reach a wider audience.
 - **Progress Tracking**: Keep track of your puzzle-solving journey.
-- **Mobile-Responsive Design**: Optimized for use on both desktop and mobile devices.
 - **Hint System**: Get hints when you are stuck in solving the puzzle.
-- **Customizable Game Rules**: Players can create or modify the rules for an even more personalized experience.
 
 ## Last Viewed Games
 

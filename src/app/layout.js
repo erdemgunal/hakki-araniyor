@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
       </body>
-      <GoogleAdsense />
+      <GoogleAdsense pId="ca-pub-8009627973833648" />
     </html>
   );
 }

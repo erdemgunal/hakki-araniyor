@@ -1,16 +1,18 @@
 import Script from 'next/script';
 
-export default function GoogleAdsense() {
-    if (process.env.NODE_ENV !== "production"){
+export default function GoogleAdsense({ pId }) {
+    // Use more specific environment check
+    if (process.env.NEXT_PUBLIC_ADSENSE_ID == null || process.env.NODE_ENV !== "production") {
         return null;
     }
 
     return (
         <Script
+            id="google-adsense"
             async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8009627973833648"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${pId}`}
             crossOrigin="anonymous"
             strategy="afterInteractive"
         />
-    )
+    );
 }

@@ -22,7 +22,11 @@ export default function About() {
     },
     {
       title: "Değerlerimiz",
-      content: "- **Yenilikçilik**: Sürekli olarak yeni fikirler ve çözümler geliştirmeye çalışıyoruz.\n- **Topluluk**: Kullanıcılarımızla güçlü bir bağ kurarak onların ihtiyaçlarına ve geri bildirimlerine göre hizmetlerimizi şekillendiriyoruz.\n- **Erişilebilirlik**: Herkesin faydalanabileceği bir platform sunmayı hedefliyoruz."
+      content: <ul className="list-disc pl-5 space-y-2">
+        <li><strong>🚀 Yenilikçilik:</strong> Sürekli olarak yeni fikirler ve çözümler geliştirmeye çalışıyoruz.</li>
+        <li><strong>👥 Topluluk:</strong> Kullanıcılarımızla güçlü bir bağ kurarak onların ihtiyaçlarına ve geri bildirimlerine göre hizmetlerimizi şekillendiriyoruz.</li>
+        <li><strong>🌍 Erişilebilirlik:</strong> Herkesin faydalanabileceği bir platform sunmayı hedefliyoruz.</li>
+      </ul>
     },
     {
       title: "Takımımız",
@@ -30,28 +34,36 @@ export default function About() {
     },
     {
       title: "Bize Ulaşın",
-      content: <>Bizimle iletişime geçmek için e-posta yoluyla bize ulaşabilirsiniz: <a href="mailto:hakkierdemgunal@gmail.com" className="text-blue-600 hover:text-blue-800">hakkierdemgunal@gmail.com</a></>
+      content: <div className="flex items-center space-x-2">
+        <span>Bizimle iletişime geçmek için:</span>
+        <a href="mailto:hakkierdemgunal@gmail.com" 
+           className="text-blue-600 hover:text-blue-800 underline font-medium">
+          hakkierdemgunal@gmail.com
+        </a>
+      </div>
     }
   ];
 
   return (
-    <main className="bg-black text-white w-full p-6 space-y-8">
+    <main className="bg-gradient-to-b from-black to-gray-900 text-white w-full p-6 space-y-8">
       <article className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">Hakkımızda</h1>
+        <h1 className="text-5xl font-bold text-center text-blue-500 mb-12 tracking-tight">
+          Hakkımızda
+        </h1>
         
         {sections.map((section, index) => (
           <section 
             key={index} 
-            className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg mb-4"
+            className="bg-white/10 backdrop-blur-sm p-8 rounded-xl shadow-xl hover:bg-white/15 transition-all duration-300 mb-6 border border-white/10"
             itemScope 
             itemType="https://schema.org/WebPageElement"
           >
             <h2 
-              className="text-2xl font-semibold text-gray-800"
+              className="text-2xl font-semibold text-blue-400 mb-4"
               itemProp="name"
             >{section.title}</h2>
             <div 
-              className="text-gray-700 mt-2 leading-relaxed"
+              className="text-gray-100 mt-2 leading-relaxed"
               itemProp="text"
             >{section.content}</div>
           </section>

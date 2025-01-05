@@ -1365,7 +1365,7 @@
     {
         "gameName": "Sınav",
         "question": "Öğrenciler askeri akademide bir sınava girmektedir. İçlerinden biri bir bilet seçer ve hazırlanmak için yerine gider. Birkaç dakika sonra profesörün yanına gider, sessizce ona öğrencinin kayıt defterini verir ve sınıftan ayrılır. Öğrenci pekiyi almıştır.",
-        "answer": "Bir mors alfabesi sınavıydı. Sınav sırasında profesör, herhangi bir öğrencinin yanına gelip excelllent'i alabileceğini söyleyerek mesaja dokunuyordu.",
+        "answer": "Bir mors alfabesi sınavıydı. Sınav sırasında profesör, herhangi bir öğrencinin kendisine gelip mükemmel olanı alabileceğini söyleyerek mesaja dokunuyordu.",
         "image": "exam.svg",
         "tags": [
             "Komik",
@@ -2280,7 +2280,7 @@
         "gameName": "Bir otobüste",
         "question": "Otobüsteyken Kate, yeni binmiş bir kadına yerini teklif etmek istedi. Ama çok utandı ve reddetti. Neden reddetti?",
         "answer": "Küçük Kate babasının kucağında oturuyordu.",
-        "image": "on_a_bus.svg",
+        "ge": "on_a_bus.svg",
         "tags": [
             "Komik",
             "Çocuklar için",

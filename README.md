@@ -24,7 +24,7 @@ Before you begin, ensure that you have the following installed:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/erdemmgunal/hakki-araniyor.git
+    git clone https://github.com/erdemgunal/hakki-araniyor.git
     cd hakki-araniyor
     ```
 

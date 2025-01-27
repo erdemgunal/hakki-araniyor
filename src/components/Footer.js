@@ -49,7 +49,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://github.com/erdemmgunal/hakki-araniyor"
+                  href="https://github.com/erdemgunal/hakki-araniyor"
                   className="hover:text-white/70 flex items-center text-white text-sm"
                   target="_blank"
                 >
@@ -75,7 +75,7 @@ export default function Footer() {
                   <Instagram size={20} />
                   <span className="sr-only">Instagram</span>
                   </Link>
-                  <Link href="https://github.com/erdemmgunal/" className="text-white hover:text-white">
+                  <Link href="https://github.com/erdemgunal/" className="text-white hover:text-white">
                   <Github size={20} />
                   <span className="sr-only">GitHub</span>
                   </Link>
